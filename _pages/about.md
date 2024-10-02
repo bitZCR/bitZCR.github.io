@@ -42,9 +42,9 @@ In the traditional PMSM vector control scheme, the current loop is controlled by
 
 The deadbeat current control calculates the voltage of the next switching cycle through the state equation of the PMSM, the motor current feedback signal and the current reference output by the speed loop.
 
-I used $\ i(k+2) = Ai(k+1)+Bu(k+1)+D(k+1) = i^*(k) \$.
+<!-- I used $\ i(k+2) = Ai(k+1)+Bu(k+1)+D(k+1) = i^*(k) \$.
 
-Then I could get $\ u(k+1) = B^{-1}(i^*(k)-A(Ai(k)+Bu(k)+D(k))-D(k+1)) \$.
+Then I could get $\ u(k+1) = B^{-1}(i^*(k)-A(Ai(k)+Bu(k)+D(k))-D(k+1)) \$. -->
 
 This is my control algorithm model.
 ![](/images/Deadbeat1.png)
