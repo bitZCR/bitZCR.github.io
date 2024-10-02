@@ -57,8 +57,8 @@ I added a disturbance observer. When a load mutation occurs in the motor, the di
 
 This is my control algorithm model.
 ![](/images/DO1.png)
-Disturbance observer structure diagram is here.
-![](/images/DO2.png)
+<!-- Disturbance observer structure diagram is here.
+![](/images/DO2.png) -->
 It can be seen that the motor has better anti-disturbance performance and the disturbance estimation is also good.
 ![](/images/DO3.png)
 
