@@ -36,10 +36,11 @@ I did some research on these topics:
 
 Control methods in PMSM
 ------
-**Markdown generator**
+**Deadbeat current predictive control**
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+In the traditional PMSM vector control scheme, the current loop is controlled by a PI regulator, which is corrected multiple times according to the current error, and then through PWM, inverter output, sampling and other delay links, the current response has a large hysteresis. In order to make the sampled current have a faster response speed and smaller current ripple, I used a deadbeat predictive control model instead of a PI regulator as the control law of the current loop.
+
+The deadbeat current control calculates the voltage of the next switching cycle through the state equation of the PMSM, the motor current feedback signal and the current reference output by the speed loop. I used $i(k+2) = Ai(k+1)+Bu(k+1)+D(k+1) = i^*(k)$ and then I could get $u(k+1) = B^{-1}(i^*(k)-A(Ai(k)+Bu(k)+D(k))-D(k+1))$.
 
 How to edit your site's GitHub repository
 ------
