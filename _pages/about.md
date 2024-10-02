@@ -40,9 +40,9 @@ Control methods in PMSM
 
 In the traditional PMSM vector control scheme, the current loop is controlled by a PI regulator, which is corrected multiple times according to the current error, and then through PWM, inverter output, sampling and other delay links, the current response has a large hysteresis. In order to make the sampled current have a faster response speed and smaller current ripple, I used a deadbeat predictive control model instead of a PI regulator as the control law of the current loop.
 
-The deadbeat current control calculates the voltage of the next switching cycle through the state equation of the PMSM, the motor current feedback signal and the current reference output by the speed loop.
+The deadbeat current control calculates the voltage of the next switching cycle through the state equation of the PMSM, the motor current feedback signal and the current reference output by the speed loop. I used 
 
-I used $\ i(k+2) = Ai(k+1)+Bu(k+1)+D(k+1) = i^*(k) \$.
+$\ i(k+2) = Ai(k+1)+Bu(k+1)+D(k+1) = i^*(k) \$.
 
 Then I could get $\ u(k+1) = B^{-1}(i^*(k)-A(Ai(k)+Bu(k)+D(k))-D(k+1)) \$.
 
