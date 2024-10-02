@@ -51,6 +51,17 @@ This is my control algorithm model.
 It can be seen that the current waveform is smooth.
 ![](/images/Deadbeat2.png)
 
+**Disturbance observer**
+
+I added a disturbance observer. When a load mutation occurs in the motor, the disturbance observer first estimates the load torque information based on the change in rotational speed, and uses it as a compensation amount for the q-axis current at a certain ratio, thus correcting a new reference current so that the system can respond to sudden changes. Current response speed under load is significantly improved, solving the problem of poor anti-interference in traditional deadbeat current prediction control systems.
+
+This is my control algorithm model.
+![](/images/DO1.png)
+Disturbance observer structure diagram is here.
+![](/images/DO2.png)
+It can be seen that the motor has better anti-disturbance performance and the disturbance estimation is also good.
+![](/images/DO3.png)
+
 How to edit your site's GitHub repository
 ------
 Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
