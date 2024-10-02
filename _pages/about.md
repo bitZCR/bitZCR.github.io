@@ -62,6 +62,15 @@ This is my control algorithm model.
 It can be seen that the motor has better anti-disturbance performance and the disturbance estimation is also good.
 ![](/images/DO3.png)
 
+**SVPWM dead time compensation**
+
+When we design the inverter, in order to prevent the upper and lower bridge arms from being directly connected, we need to set a dead time to delay the conduction of the switch device. However, the existence of the dead time will cause the inverter output voltage waveform to have a certain amplitude and phase error, which is not what we want to see. Therefore, I designed a dead time compensation strategy, using the volt-second product balance principle to obtain the compensation time.
+
+This is my control algorithm model.
+![](/images/SVPWM1.png)
+It can be seen that the motor torque ripple is significantly reduced.
+![](/images/SVPWM2.png)
+
 How to edit your site's GitHub repository
 ------
 Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
