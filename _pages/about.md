@@ -83,8 +83,11 @@ It can be seen that the error of estimation is small.
 Secure MPC
 ------
 I considered a Denial-of-Service (DoS) attack which could disrupt the channels of communication between sensor, controller and actuator when designing MPC in networked systems.
+![](/images/SecureMPC1.png)
 
+To mitigate the impact of DoS attack and maintain stability even under adverse conditions, I proposed a resilient MPC algorithm with a suitable sampling update strategy, combined with an actuator buffer for storing feasible control inputs.
 
+Moreover, I am interested in inherent robustness properties of MPC. That is to say, MPC with a nominal prediction model and persistent but bounded disturbances has some degree of inherent robustness when the terminal control law and the terminal penalty matrix are chosen as the linear quadratic control law and the related Lyapunov matrix, respectively. In this case, I combined it with the duration of DoS attack to derive the bound of disturbances.
 
 How to edit your site's GitHub repository
 ------
