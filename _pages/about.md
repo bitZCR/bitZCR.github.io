@@ -79,6 +79,7 @@ This is my control algorithm model.
 ![](/images/EKF1.png)
 It can be seen that the error of estimation is small.
 ![](/images/EKF2.png)
+Here is my paper. [Current Prediction Control Strategy of Permanent Magnet Synchronous Motor Based on Extended Kalman Filter](https://ieeexplore.ieee.org/document/9634498)
 
 Secure MPC
 ------
@@ -88,6 +89,8 @@ I considered a Denial-of-Service (DoS) attack which could disrupt the channels o
 To mitigate the impact of DoS attack and maintain stability even under adverse conditions, I proposed a resilient MPC algorithm with a suitable sampling update strategy, combined with an actuator buffer for storing feasible control inputs.
 
 Moreover, I am interested in inherent robustness properties of MPC. That is to say, MPC with a nominal prediction model and persistent but bounded disturbances has some degree of inherent robustness when the terminal control law and the terminal penalty matrix are chosen as the linear quadratic control law and the related Lyapunov matrix, respectively. In this case, I combined it with the duration of DoS attack to derive the bound of disturbances.
+
+Here are my papers. [Stabilizing nonlinear model predictive control under Denial-of-Service attack via dynamic samples selection](https://www.sciencedirect.com/science/article/abs/pii/S0005109824000839?via%3Dihub) and [Inherent attack tolerance properties of model predictive control under DoS attacks](https://www.sciencedirect.com/science/article/abs/pii/S0016003223007573?via%3Dihub).
 
 Learning MPC
 ------
