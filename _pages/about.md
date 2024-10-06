@@ -93,7 +93,13 @@ Learning MPC
 ------
 **Learning the system dynamics**
 
+I used ELM network to fit the system dynamics model and then applied nonlinear MPC to control the system state trajectory to a specified equilibrium point. I studied the closed-loop stability and derived that with the bound of error on the training set, the system is input-to-state stable.
+
 **Learning the controller design**
+
+I studied a paper named "MPC-Inspired Reinforcement Learning for Verifiable Model-Free Control". The authors proposed a new type of controller which was in structure similar to QP. However, its parameters were being trained via DRL method instead of deriving from system models. I applied this controller to PMSM in both simulation and experiments.
+
+Click here to see my video. [PMSM with LQP](https://www.youtube.com/watch?v=nCaUqFcvqo0). The result was not satisfactory since the microcontroller could not run the algorithm on time.
 
 <!-- How to edit your site's GitHub repository
 ------
