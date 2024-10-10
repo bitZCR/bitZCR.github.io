@@ -101,7 +101,7 @@ I used ELM network to fit the system dynamics model and then applied nonlinear M
 **Learning the controller design**
 
 I studied a paper named "MPC-Inspired Reinforcement Learning for Verifiable Model-Free Control". The authors proposed a new type of controller which was in structure similar to QP. However, its parameters were being trained via DRL method instead of deriving from system models. I applied this controller to PMSM in both simulation and experiments.
-
+![](/images/PMSM.png)
 Click here to see my video. [PMSM with FOC](https://youtu.be/RWU3KpIIk64) and [PMSM with LQP](https://www.youtube.com/watch?v=nCaUqFcvqo0). The LQP result was not satisfactory since the microcontroller could not run the algorithm on time.
 
 <!-- How to edit your site's GitHub repository
